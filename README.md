@@ -3,7 +3,9 @@
 
 
 ## Introduction
+The past few presidential elections have faced tons of scrutiny with allegations of unfair voting practices, unfair access to voting centers, and racially-discriminatory electoral districts. If we were able to just have a computer decide district lines for us, could we potentially eliminate or, at least, ameliorate some of these criticisms? 
 
+In this project, we used k-means clustering and D-Wave’s Leap hybrid Discrete Quadratic Model (DQM) solvers to find the optimal voting population distribution to prevent gerrymandering practices taken by government agencies.
 
 
 ## Motivation/Goals for the Project
@@ -18,7 +20,9 @@ We wanted to take quantum computing and demonstrate its applicability in topics 
 
 ## Description of the Work
 
+We began with construction of a k-means clustering method for clusters of equal sizes. 
 
+Using census data from the GitHub repository CensusData, which takes record of all previous years’ census for all US states and territories, we are able to import data from specific districts and make use of k-means for proper division of populations to be considered in elections. 
 
 
 ## Proposals for Future Work
