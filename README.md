@@ -29,14 +29,12 @@ Using census data from the GitHub repository CensusData, which takes record of a
 
 * Create a website/front-end interface for users to interact with the data
 * Code a function that automates the collection of the geographic data
-
-
-
-
-## References
-[https://arxiv.org/pdf/2008.02369.pdf](QUBO Formulations for Training Machine Learning
-Models)
 * Include more factors that may come into play with a realistic setting, i.e. more current geopolitical data, socioeconomic status, education, etc.
 
 Other applications:
 * We can apply our k-means clustering algorithm in fields of potent research interest, including solid state/condensed matter physics, etc, but we have demonstrated the ability to include statistical data for usage in economics, political science, etc. 
+
+
+## References
+[QUBO Formulations for Training Machine Learning
+Models](https://arxiv.org/pdf/2008.02369.pdf)
