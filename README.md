@@ -12,9 +12,5 @@
 * Code a function that automates the collection of the geographic data
 * Include more factors that may come into play with a realistic setting, i.e. more current geopolitical data, socioeconomic status, education, etc.
 
-
-You can find a potential README template in [one of last year's projects](https://github.com/iQuHACK/QuhacMan).
-
-Feel free to contact the staff with questions over our [event's slack](https://iquhack.slack.com), or via iquhack@mit.edu.
-
-Good luck!
+Other applications:
+* We can apply our k-means clustering algorithm in fields of potent research interest, including solid state/condensed matter physics, etc, but we have demonstrated the ability to include statistical data for usage in economics, political science, etc. 
