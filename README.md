@@ -2,12 +2,16 @@
 
 ## Introduction
 
-Having a README in your team's repository facilitates judging. A good README contains:
-* a clear title for your project,
-* a short abstract,
-* the motivation/goals for your project,
-* a description of the work you did, and
-* proposals for future work.
+## Motivation/Goals for the Project
+
+## Description of the Work
+
+## Proposals for Future Work
+
+* Create a website/front-end interface for users to interact with the data
+* Code a function that automates the collection of the geographic data
+* Include more factors that may come into play with a realistic setting, i.e. more current geopolitical data, socioeconomic status, education, etc.
+
 
 You can find a potential README template in [one of last year's projects](https://github.com/iQuHACK/QuhacMan).
 
