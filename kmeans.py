@@ -7,9 +7,9 @@ from pyqubo import Array, Binary, Placeholder
 
 # +
 def solve(
-    N, 
-    K, 
-    dist_matrix, 
+    N, # Number of data points
+    K, # Number of clusters
+    dist_matrix, # NxN matrix with distances between data points
     gamma_distinct=None, # Coefficent for the penalty of being
     gamma_multiple=None, # Coefficient for the penalty of being assigned to multiple clusters (illegal); should be very high 
     target_goal=None, # Target equal value for each cluster; by default, it's N//K
@@ -22,15 +22,16 @@ def solve(
         point_weights = np.ones(N)
     
     if gamma_distinct is None:
-        gamma_distinct = 1
+        gamma_distinct = np.max(dist_matrix)
     
     if gamma_multiple is None:
-        gamma_multiple = 10
+        gamma_multiple = np.max(dist_matrix) # weight bigger than sum of all distances, not worth taking more than one
 
     group_matrix = Array.create('x', shape=(N, K), vartype='BINARY')
 
     distinct_size_penalty = Placeholder("gamma_distinct")
     multiple_assignment_penalty = Placeholder("gamma_multiple")
+    target = Placeholder("target_goal")
 
     all_terms = []
 
@@ -38,14 +39,14 @@ def solve(
     for i in range(N):
         single_asignment_constraint = (1 - sum(group_matrix[i,:]))**2
         all_terms.append(
-            single_asignment_constraint * multiple_assignment_penalty
+            multiple_assignment_penalty*single_asignment_constraint
         )
 
     # Penalty for exceding equal number of members per cluster
     for j in range(K):
-        cluster_member_constraint = (target_goal - sum(group_matrix[:, j]))**2
+        cluster_member_constraint = (target - sum(point_weights*group_matrix[:, j]))**2
         all_terms.append(
-            multiple_assignment_penalty*cluster_member_constraint
+            distinct_size_penalty*cluster_member_constraint
         )
 
     # Adding objective for distances. Must minimize distances in the same group
@@ -60,7 +61,9 @@ def solve(
     equation = sum(all_terms)
     model = equation.compile()
     Q, offset = model.to_qubo(
-        feed_dict={'gamma_distinct': 1, "gamma_multiple": 10}
+        feed_dict={
+            'gamma_distinct': gamma_distinct, "gamma_multiple": gamma_multiple, "target_goal": target_goal
+        }
     )
 
     # Call D-Wave solver
