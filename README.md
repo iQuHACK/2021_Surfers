@@ -35,6 +35,7 @@ Other applications:
 
 ## References
 [P. Date, D. Arthur, L. Pusey-Nazzaro (2020) arXiv:csLG 2008.02369](https://arxiv.org/pdf/2008.02369.pdf)
+
 [A.Lucas (2014) *Frontiers in Physics* **2**, 5](https://www.frontiersin.org/articles/10.3389/fphy.2014.00005/full)
 
 
