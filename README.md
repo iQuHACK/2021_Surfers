@@ -1,10 +1,25 @@
 # K-means Cluttering with Quantum Annealing Applied to Electoral Redistricting
 
+
+
 ## Introduction
+
+
 
 ## Motivation/Goals for the Project
 
+Gerrymandering is the practice of redrawing geopolitical district boundaries to give an unfair advantage to a political party in elections. 
+
+Our goal was to use the well-known method of k-means clustering and D-Wave’s Leap hybrid solver to prevent gerrymandering practices. Using population information from census data over the counties of a state, we are able to suggest best practices for districting in elections. 
+
+We wanted to take quantum computing and demonstrate its applicability in topics that affect not just scientists and engineers, but the general public. 
+
+
+
 ## Description of the Work
+
+
+
 
 ## Proposals for Future Work
 
