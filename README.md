@@ -1,13 +1,9 @@
 # *K*-means Cluttering with Quantum Annealing Applied to Electoral Redistricting
 
-##############################################
-
 ## Introduction
 The past few presidential elections have faced tons of scrutiny with allegations of unfair voting practices, unfair access to voting centers, and racially-discriminatory electoral districts. If we were able to just have a computer decide district lines for us, could we potentially eliminate or, at least, ameliorate some of these criticisms? 
 
 In this project, we used *k*-means clustering and D-Wave’s Leap hybrid Discrete Quadratic Model (DQM) solvers to find the optimal voting population distribution to prevent gerrymandering practices taken by government agencies.
-
-##############################################
 
 ## Motivation/Goals for the Project
 
@@ -17,7 +13,6 @@ Our goal was to use the well-known method of *k*-means clustering and D-Wave’s
 
 We wanted to take quantum computing and demonstrate its applicability in topics that affect not just scientists and engineers, but the general public. 
 
-##############################################
 
 ## Description of the Work
 
@@ -25,7 +20,7 @@ We began with construction of a *k*-means clustering method for clusters of equa
 
 Using census data from the GitHub repository CensusData, which takes record of all previous years’ census for all US states and territories, we are able to import data from specific districts and make use of *k*-means for proper division of populations to be considered in elections. 
 
-##############################################
+
 
 ## Proposals for Future Work
 
@@ -36,7 +31,7 @@ Using census data from the GitHub repository CensusData, which takes record of a
 Other applications:
 * We can apply our *k*-means clustering algorithm in fields of potent research interest, including solid state/condensed matter physics, etc, but we have demonstrated the ability to include statistical data for usage in economics, political science, etc. 
 
-##############################################
+
 
 ## References
 [P. Date, D. Arthur, L. Pusey-Nazzaro (2020) arXiv:csLG 2008.02369](https://arxiv.org/pdf/2008.02369.pdf)
