@@ -20,7 +20,7 @@ We began with construction of a *k*-means clustering method for clusters of equa
 
 Using census data from the GitHub repository CensusData, which takes record of all previous years’ census for all US states and territories, we are able to import data from specific districts and make use of *k*-means for proper division of populations to be considered in elections. 
 
-Note: Math used in this project can be found in the pdf file in the repo
+Note: Labels for data can be found in the pdf file in the repo
 
 
 
